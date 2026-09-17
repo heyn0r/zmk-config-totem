@@ -190,20 +190,20 @@
 
 // NAV — Backspace halten (rechter Daumen) → Navigation links
 // ┌───────┬───────┬───────┬───────┬───────┐   ┌───────┬───────┬───────┬───────┬───────┐
-// │  ⌘Z   │  ⌘X   │  ⌘C   │  ⌘V   │ ⌘⇧Z   │   │       │ Hyp←  │ Hyp↓  │ Hyp↑  │ Hyp→  │
+// │  ⌘Z   │ Home  │   ↑   │  End  │ PgUp  │   │       │       │       │       │       │
 // ├───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┤
-// │   ←   │   ↓   │   ↑   │   →   │CapsWrd│   │       │  sft  │  cmd  │  alt  │  ctl  │
+// │ ⌘⇧Z   │   ←   │   ↓   │   →   │ PgDn  │   │       │  sft  │  cmd  │  alt  │  ctl  │
 // ┌───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┐
-// │       │ Home  │ PgDn  │ PgUp  │  End  │  Del  │   │       │       │       │       │       │       │
+// │       │CapsWrd│  ⌘X   │  ⌘C   │  ⌘V   │  Del  │   │       │       │       │       │       │       │
 // └───────┴───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┴───────┴───────┘
 //                         │       │  Tab  │ Space │   │ Enter │ (NAV) │  Esc  │
 //                         └───────┴───────┴───────┘   └───────┴───────┴───────┘
         nav_layer {
             display-name = "NAV";
             bindings = <
-    &kp LG(DE_Z)  &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp LG(LS(DE_Z))  &trans        &kp HYP(LEFT) &kp HYP(DOWN) &kp HYP(UP)   &kp HYP(RIGHT)
-    &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &caps_word        &trans        &trans        &trans        &trans        &trans
-&trans     &kp LG(LEFT) &kp PG_DN &kp PG_UP  &kp LG(RIGHT) &kp DEL           &trans        &trans        &trans        &trans        &trans        &trans
+    &kp LG(DE_Z)  &kp LG(LEFT)  &kp UP        &kp LG(RIGHT) &kp PG_UP         &trans        &trans        &trans        &trans        &trans
+    &kp LG(LS(DE_Z)) &kp LEFT   &kp DOWN      &kp RIGHT     &kp PG_DN         &trans        &trans        &trans        &trans        &trans
+&trans     &caps_word &kp LG(X) &kp LG(C)     &kp LG(V)     &kp DEL           &trans        &trans        &trans        &trans        &trans        &trans
                                 &trans        &kp TAB       &trans            &kp RET       &trans        &trans
             >;
         };
